@@ -2,6 +2,8 @@
 
 The purpose of this app is to display my skills as a Software Engineer and give some insight into some of my past projects for employers and anyone else who may be interested. I decided to build this in React using Next.js and Tailwind CSS so I could get some experience developing using frameworks and libraries.
 
+To use this software, clone the repository, run npm install in the project directory, then run the command "npm run dev" to start the local server.
+
 [Software Demo Video](https://youtu.be/6NaUf6XcowA)
 
 # Web Pages
