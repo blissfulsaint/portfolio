@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { LayoutBand } from "blisskit-ui";
 
 export const metadata: Metadata = {
   title: "Home | Brandon\'s Portfolio Site",
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <h1>This is the Portfolio Home Page</h1>
+    <LayoutBand>
+      <h1 className="bg-customBlue">This is the Portfolio Home Page</h1>
+    </LayoutBand>
   );
 }
