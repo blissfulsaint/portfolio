@@ -5,18 +5,18 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const privateOctokit = new Octokit({
-  auth: process.env.PRIVATE_GITHUB_TOKEN,
-});
+// const privateOctokit = new Octokit({
+//   auth: process.env.PRIVATE_GITHUB_TOKEN,
+// });
 
 export async function GET() {
   try {
     const reposResponse = await octokit.request('GET /user/repos?page=1&per_page=1000', { type: 'owner' });
 
-    const privateRepo = await privateOctokit.request('GET /repos/blissfulsaint/htdocs/languages', {
-      owner: 'blissfulsaint',
-      repo: 'htdocs',
-    })
+    // const privateRepo = await privateOctokit.request('GET /repos/blissfulsaint/htdocs/languages', {
+    //   owner: 'blissfulsaint',
+    //   repo: 'htdocs',
+    // })
     
     const repos = reposResponse.data;
 
@@ -38,11 +38,11 @@ export async function GET() {
     }
 
     // *** This implementation needs improvement in the future, it will suffice for now ***
-    for (const [language, bytes] of Object.entries(privateRepo.data)) {
-      // Estimate lines of code (~60 bytes per line)
-      const estimatedLines = Math.round((bytes as number) / 60);
-      languageTotals[language] = (languageTotals[language] || 0) + estimatedLines;
-    }
+    // for (const [language, bytes] of Object.entries(privateRepo.data)) {
+    //   // Estimate lines of code (~60 bytes per line)
+    //   const estimatedLines = Math.round((bytes as number) / 60);
+    //   languageTotals[language] = (languageTotals[language] || 0) + estimatedLines;
+    // }
 
     return NextResponse.json(languageTotals);
   } catch (error) {
