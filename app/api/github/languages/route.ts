@@ -22,8 +22,6 @@ export async function GET() {
 
     const languageTotals: Record<string, number> = {};
 
-    console.log("Using GitHub Token:", !!process.env.GITHUB_TOKEN);
-
     for (const repo of repos) {
       if (repo.fork) continue;
 
@@ -31,8 +29,6 @@ export async function GET() {
         owner: repo.owner.login,
         repo: repo.name,
       });
-
-      console.log(langResponse.data);
 
       for (const [language, bytes] of Object.entries(langResponse.data)) {
         // Estimate lines of code (~60 bytes per line)
