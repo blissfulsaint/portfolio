@@ -9,7 +9,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
   Cell
 } from 'recharts';
 
@@ -42,7 +41,7 @@ export default function GitHubLanguagesBarChart() {
 
   return (
     <div className="w-full max-w-4xl mx-auto bg-white dark:bg-zinc-900 rounded-2xl shadow-lg p-6">
-      <h2 className="text-2xl font-semibold mb-6 text-center">Top Languages by Estimated LOC</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center">Top Languages by Estimated Lines of Code</h2>
       <ResponsiveContainer width="100%" height={350}>
         <BarChart
           layout="vertical"
@@ -55,8 +54,8 @@ export default function GitHubLanguagesBarChart() {
           <Tooltip
             formatter={(value: number) => `${value.toLocaleString()} lines`}
             labelFormatter={(label: string) => `Language: ${label}`}
+            labelClassName='text-black'
           />
-          <Legend />
           <Bar dataKey="lines" name="Lines of Code">
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
