@@ -1,6 +1,7 @@
 'use client';
 import styles from './NavBar.module.css';
 import { useState, useEffect } from 'react';
+import clsx from 'clsx';
 import Link from 'next/link';
 
 const links = [
@@ -48,12 +49,16 @@ export default function NavBar() {
                 onClick={toggleMenu}
                 aria-expanded={isOpen}
                 aria-controls='navbar-menu'
-            ><span className={`${styles.navicon} ${isOpen ? styles.naviconChecked : ''}`}></span></div>
+            ><span className={clsx(
+                styles.navicon,
+                isOpen ? styles.naviconChecked : '')}></span></div>
             <ul 
-                className={`fixed z-10 top-0 left-0 h-screen bg-zinc-900 p-8 pr-10 flex flex-col gap-y-5
-                ${isResizing ? '' : 'transition-transform duration-300 ease-in-out'}
-                ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
-                md:translate-x-0 md:static md:bg-transparent md:flex md:h-fit md:flex-row flex-wrap md:gap-y-0 gap-x-5 md:justify-end text-slate-300 md:my-6 md:p-0 md:pr-6 md:block md:transition-none`}
+                className={clsx(
+                    'fixed z-10 top-0 left-0 h-screen bg-zinc-900 p-8 pr-10 flex flex-col gap-y-5',
+                    isResizing ? '' : 'transition-transform duration-300 ease-in-out',
+                    isOpen ? 'translate-x-0' : '-translate-x-full',
+                    'md:translate-x-0 md:static md:bg-transparent md:flex md:h-fit md:flex-row flex-wrap md:gap-y-0 gap-x-5 md:justify-end text-slate-300 md:my-6 md:p-0 md:pr-6 md:block md:transition-none'
+                )}
             >
                 {links.map((link, index) => {
                     return (
