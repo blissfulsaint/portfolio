@@ -1,5 +1,7 @@
 import { Metadata } from "next";
-import { LayoutBand } from "blisskit-ui";
+import { LayoutBand, CardLink } from "blisskit-ui";
+
+import Hero from "./components/Hero/Hero";
 import GitHubContributionGrid from "./components/GitHubContributionGrid/GitHubContributionGrid";
 import GitHubLanguagesChart from "./components/GitHubLanguagesChart/GitHubLanguagesChart";
 
@@ -10,10 +12,17 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <LayoutBand>
-      <h1 className="bg-customBlue">This is the Portfolio Home Page</h1>
-      <GitHubContributionGrid />
-      <GitHubLanguagesChart />
-    </LayoutBand>
+    <>
+      <Hero title="Welcome to BlissHub!" imgSrc="/hiking.jpg" />
+      <LayoutBand>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+          <CardLink title="BlissKit-UI" textClassName="bg-primaryColor" imgSrc="/blisskit-ui.png" />
+          <CardLink title="Valley Music Club" textClassName="bg-primaryColor" imgSrc='/vmc.jpeg' />
+          <CardLink title="Style Stage SASS" textClassName="bg-primaryColor" imgSrc="/stylestage.png" />
+        </div>
+        <GitHubContributionGrid />
+        <GitHubLanguagesChart />
+      </LayoutBand>
+    </>
   );
 }
