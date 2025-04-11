@@ -41,7 +41,7 @@ export default function GitHubLanguagesBarChart() {
 
   return (
     <div className="w-full max-w-4xl mx-auto bg-white dark:bg-zinc-900 rounded-2xl shadow-lg p-6">
-      <h2 className="text-2xl font-semibold mb-6 text-center">Top Languages by Estimated Lines of Code</h2>
+      <h3 className="font-semibold mb-6 text-center">Top Languages by Estimated Lines of Code</h3>
       <ResponsiveContainer width="100%" height={350}>
         <BarChart
           layout="vertical"
