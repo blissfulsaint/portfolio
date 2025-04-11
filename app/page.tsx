@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { LayoutBand, CardLink, Separator } from "blisskit-ui";
+import { LayoutBand, Separator } from "blisskit-ui";
 
 import Hero from "./components/Hero/Hero";
 import GitHubContributionGrid from "./components/GitHubContributionGrid/GitHubContributionGrid";
