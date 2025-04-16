@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Brandon\'s Portfolio Site',
-    default: 'Brandon\'s Portfolio Site',
+    template: '%s | BlissHub',
+    default: 'BlissHub',
   },
   description: "A Next.js portfolio site featuring Brandon Lisonbee’s work, experience, and interests!",
 };
