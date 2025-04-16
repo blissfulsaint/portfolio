@@ -7,8 +7,8 @@ import GitHubLanguagesChart from "./components/GitHubLanguagesChart/GitHubLangua
 import FeaturedWorks from "./components/FeaturedWorks/FeaturedWorks";
 
 export const metadata: Metadata = {
-  title: "Home | Brandon\'s Portfolio Site",
-  description: "Home page for Brandon Lisonbee's portfolio site",
+  title: "Home | BlissHub",
+  description: "Home page for BlissHub - Brandon Lisonbee's portfolio site",
 };
 
 export default function Home() {

@@ -63,6 +63,10 @@ export default function GitHubLanguagesBarChart() {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+
+      <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 text-center">
+        *Based on estimated lines of code (1 line ≈ 60 bytes). Data pulled from public and private repositories I own.
+      </p>
     </div>
   );
 }
