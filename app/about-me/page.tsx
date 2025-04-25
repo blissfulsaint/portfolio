@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { LayoutBand, Separator } from "blisskit-ui";
 
+import Bio from "../components/Bio/Bio";
 import Timeline from "../components/timeline/Timeline/Timeline";
 import PageLink from "../components/PageLink/PageLink";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero title="About Me" imgSrc="/hiking.jpg" />
       <LayoutBand>
         <Separator size="xs" />
+        <Bio />
         <Timeline />
         <PageLink href='/' button className="m-auto">Return Home</PageLink>
       </LayoutBand>
