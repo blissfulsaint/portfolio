@@ -1,32 +1,41 @@
 import TimelineItem from "../TimelineItem/TimelineItem"
 
+import timelineData from '@/app/_data/timeline.json';
+
+interface TimelineEvent {
+    date: string;
+    type: "start" | "milestone" | "end" | "event";
+    title: string;
+    organization?: string;
+    description: string[];
+}
+
 export default function Timeline() {
+    const events = timelineData as TimelineEvent[];
+
+    const sortedEvents = [...events].sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+    })
+
     return (
-        <section className="m-auto mb-8 w-fit">
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor suscipit sollicitudin. Curabitur vel elit fermentum, interdum lorem id, facilisis leo. Sed massa dolor, pharetra semper est ut, volutpat mattis sem. Curabitur maximus ullamcorper luctus. Quisque venenatis lacus quis metus sagittis sagittis. Suspendisse sed lacus felis. Suspendisse a feugiat mi. Mauris a pulvinar nunc, ac rhoncus magna. Ut tristique orci urna, euismod efficitur lorem accumsan ac. Morbi sit amet mi nec lorem ultrices aliquam id nec risus. Nulla dapibus nunc at lobortis efficitur. Morbi justo ante, aliquet nec blandit a, maximus at sapien. Quisque condimentum fermentum aliquet. Etiam laoreet vulputate odio ut dapibus. Aliquam placerat porta efficitur. Donec dapibus, dui eu tempus ultrices, erat nisl hendrerit leo, eget hendrerit dolor orci et ex.</p>
-            </TimelineItem>
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Suspendisse a feugiat mi. Mauris a pulvinar nunc, ac rhoncus magna. Ut tristique orci urna, euismod efficitur lorem accumsan ac. Morbi sit amet mi nec lorem ultrices aliquam id nec risus. Nulla dapibus nunc at lobortis efficitur. Morbi justo ante, aliquet nec blandit a, maximus at sapien. Quisque condimentum fermentum aliquet. Etiam laoreet vulputate odio ut dapibus. Aliquam placerat porta efficitur. Donec dapibus, dui eu tempus ultrices, erat nisl hendrerit leo, eget hendrerit dolor orci et ex.</p>
-            </TimelineItem>
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor suscipit sollicitudin. Curabitur vel elit fermentum, interdum lorem id, facilisis leo. Sed massa dolor, pharetra semper est ut, volutpat mattis sem.</p>
-            </TimelineItem>
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor suscipit sollicitudin. Curabitur vel elit fermentum, interdum lorem id, facilisis leo. Sed massa dolor, pharetra semper est ut, volutpat mattis sem. Curabitur maximus ullamcorper luctus. Quisque venenatis lacus quis metus sagittis sagittis. Suspendisse sed lacus felis. Suspendisse a feugiat mi. Mauris a pulvinar nunc, ac rhoncus magna. Ut tristique orci urna, euismod efficitur lorem accumsan ac. Morbi sit amet mi nec lorem ultrices aliquam id nec risus. Nulla dapibus nunc at lobortis efficitur. Morbi justo ante, aliquet nec blandit a, maximus at sapien. Quisque condimentum fermentum aliquet. Etiam laoreet vulputate odio ut dapibus. Aliquam placerat porta efficitur. Donec dapibus, dui eu tempus ultrices, erat nisl hendrerit leo, eget hendrerit dolor orci et ex.</p>
-            </TimelineItem>
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Suspendisse a feugiat mi. Mauris a pulvinar nunc, ac rhoncus magna. Ut tristique orci urna, euismod efficitur lorem accumsan ac. Morbi sit amet mi nec lorem ultrices aliquam id nec risus. Nulla dapibus nunc at lobortis efficitur. Morbi justo ante, aliquet nec blandit a, maximus at sapien. Quisque condimentum fermentum aliquet. Etiam laoreet vulputate odio ut dapibus. Aliquam placerat porta efficitur. Donec dapibus, dui eu tempus ultrices, erat nisl hendrerit leo, eget hendrerit dolor orci et ex.</p>
-            </TimelineItem>
-            <TimelineItem>
-                <h3 className="mt-0">Sample TimelineItem Heading</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor suscipit sollicitudin. Curabitur vel elit fermentum, interdum lorem id, facilisis leo. Sed massa dolor, pharetra semper est ut, volutpat mattis sem.</p>
-            </TimelineItem>
+        <section className="m-auto mb-4 w-fit">
+            {sortedEvents.map((event, index) => {
+                const date = new Date(event.date);
+                const formatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short' });
+                const formattedDate = formatter.format(date);
+
+                return (
+                <TimelineItem className="pb-12" key={index}>
+                    <h3 className="mt-0 p-0">{event.title}</h3>
+                    <p className="p-0 text-sm text-gray-400">{event.organization}</p>
+                    <p className="p-0 text-sm text-gray-400">{formattedDate}</p>
+                    <ul className="pl-6 pt-2">
+                        {event.description.map((line: string, idx: number) => (
+                            <li className="list-disc" key={idx}>{line}</li>
+                        ))}
+                    </ul>
+                </TimelineItem>
+            )})}
         </section>
     )
 }

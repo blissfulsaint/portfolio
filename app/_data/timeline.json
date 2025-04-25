@@ -1,0 +1,63 @@
+[
+    {
+        "date": "2025-04",
+        "type": "start",
+        "title": "Started Software Developer Role",
+        "organization": "AgriGro West (contract)",
+        "description": [
+            "Began subcontractor work on an agricultural ecommerce React website and Flutter app with a Contentful API."
+        ]
+    },
+    {
+        "date": "2024-04",
+        "type": "start",
+        "title": "Started Web Developer Internship",
+        "organization": "FamilySearch",
+        "description": [
+            "Joined the TreeWeb team as a frontend developer focused on React."
+        ]
+    },
+    {
+        "date": "2024-09",
+        "type": "end",
+        "title": "Completed Internship",
+        "organization": "FamilySearch",
+        "description": []
+    },
+    {
+        "date": "2023-12",
+        "type": "start",
+        "title": "Started Software Developer Internship",
+        "organization": "AmericaHealth",
+        "description": [
+            "Joined the software development team focusing on Angular, PHP, and MySQL."
+        ]
+    },
+    {
+        "date": "2024-04",
+        "type": "end",
+        "title": "Completed Internship",
+        "organization": "AmericaHealth",
+        "description": []
+    },
+    {
+        "date": "2023-02",
+        "type": "start",
+        "title": "Started Independent Web Dev Project",
+        "organization": "Valley Music Club (volunteer)",
+        "description": [
+            "Began architecting the ValleyMusicClub.com official website.",
+            "Communicated regularly with client to determine requirements for the site."
+        ]
+    },
+    {
+        "date": "2023-10",
+        "type": "event",
+        "title": "2nd Place in Category @Hackathon",
+        "organization": "I-Hack (BYU-Idaho Hackathon)",
+        "description": [
+            "Placed in 2nd in the Media and Communication category with a new carpool application: iCarpool",
+            "Created custom component system in JavaScript without using React"
+        ]
+    }
+]
