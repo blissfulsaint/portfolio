@@ -18,8 +18,10 @@ export default function Home() {
       <Hero title="About Me" imgSrc="/hiking.jpg" />
       <LayoutBand>
         <Separator size="xs" />
-        <Bio />
-        <Timeline />
+        <div className="grid grid-cols-1 md:grid-cols-[350px,1fr] gap-8">
+          <Bio className="md:sticky top-[6em] self-start" />
+          <Timeline />
+        </div>
         <PageLink href='/' button className="m-auto">Return Home</PageLink>
       </LayoutBand>
     </>
