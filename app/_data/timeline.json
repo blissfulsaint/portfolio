@@ -51,6 +51,24 @@
         ]
     },
     {
+        "date": "2017-09",
+        "type": "event",
+        "title": "Started Higher Education @BYU-Idaho",
+        "organization": "Brigham Young University - Idaho",
+        "description": []
+    },
+    {
+        "date": "2024-07",
+        "type": "event",
+        "title": "Graduated from BYU-Idaho",
+        "organization": "Brigham Young University - Idaho",
+        "description": [
+            "Bachelor's of Science in Software Engineering",
+            "Certificate in Full-stack Web Development",
+            "GPA: 3.97/4.0"
+        ]
+    },
+    {
         "date": "2023-10",
         "type": "event",
         "title": "2nd Place in Category @Hackathon",

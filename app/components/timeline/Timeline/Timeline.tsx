@@ -29,7 +29,7 @@ export default function Timeline() {
                     <h3 className="mt-0 p-0">{event.title}</h3>
                     <p className="p-0 text-sm text-gray-400">{event.organization}</p>
                     <p className="p-0 text-sm text-gray-400">{formattedDate}</p>
-                    <ul className="pl-6 pt-2">
+                    <ul className="pl-5 pt-2">
                         {event.description.map((line: string, idx: number) => (
                             <li className="list-disc" key={idx}>{line}</li>
                         ))}

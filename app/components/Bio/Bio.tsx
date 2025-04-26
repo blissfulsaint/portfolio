@@ -26,7 +26,7 @@ export default function Bio({
             />
             <div>
                 <h2 className="text-center md:text-left">Brandon Lisonbee</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor suscipit sollicitudin. Curabitur vel elit fermentum, interdum lorem id, facilisis leo. Sed massa dolor, pharetra semper est ut, volutpat mattis sem. Curabitur maximus ullamcorper luctus. Quisque venenatis lacus quis metus sagittis sagittis. Suspendisse sed lacus felis. Suspendisse a feugiat mi. Mauris a pulvinar nunc, ac rhoncus magna. Ut tristique orci urna, euismod efficitur lorem accumsan ac. Morbi sit amet mi nec lorem ultrices aliquam id nec risus.</p>
+                <p>I'm a passionate developer with a love for building clean, user-focused applications. I enjoy taking ideas from concept to reality, blending thoughtful design with strong technical foundations. Outside of coding, I find inspiration in aviation, music, and the outdoors. I'm always looking for ways to improve my skills, whether through new projects, collaboration, or ongoing learning. I believe that great software comes from a mix of creativity, persistence, and a genuine desire to make people's lives better.</p>
             </div>
         </aside>
     )
