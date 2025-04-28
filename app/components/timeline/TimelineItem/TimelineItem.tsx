@@ -22,7 +22,7 @@ export default function TimelineItem({
         >
             <span 
                 className={clsx(
-                    "absolute size-4 rounded-full bg-slate-500 border border-2 border-slate-500 -left-[9px] top-[0.20em]",
+                    "absolute size-4 rounded-full border border-[0.20em] border-slate-500 -left-[9px] top-[0.20em]",
                     bgColor
                 )} />
             {children}
