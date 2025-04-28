@@ -2,11 +2,13 @@ import clsx from "clsx";
 
 interface TimelineItemProps {
     children?: React.ReactNode;
+    bgColor?: string;
     className?: string;
 }
 
 export default function TimelineItem({
     children,
+    bgColor,
     className,
     ...rest
 }: TimelineItemProps) {
@@ -18,7 +20,11 @@ export default function TimelineItem({
             )}
             {...rest}
         >
-            <span className="absolute size-3 rounded-full bg-slate-500 -left-[7px] top-[0.30em]" />
+            <span 
+                className={clsx(
+                    "absolute size-4 rounded-full bg-slate-500 border border-2 border-slate-500 -left-[9px] top-[0.20em]",
+                    bgColor
+                )} />
             {children}
         </div>
     )
