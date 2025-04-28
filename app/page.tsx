@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero title="Welcome to BlissHub!" imgSrc="/hiking.jpg" />
+      <Hero title="Welcome to BlissHub!" subtitle="Brandon Lisonbee's Software Engineering Portfolio Site" imgSrc="/hiking.jpg" />
       <LayoutBand>
         <Separator size="xs" />
         <FeaturedWorks />
