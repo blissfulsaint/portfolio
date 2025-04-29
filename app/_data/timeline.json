@@ -5,7 +5,8 @@
         "title": "Started Software Developer Role",
         "organization": "AgriGro West (contract)",
         "description": [
-            "Began subcontractor work on an agricultural ecommerce React website and Flutter app with a Contentful API."
+            "Building and maintaining an agricultural ecommerce platform, including a React-based website and Flutter mobile application integrated with a Contentful CMS.",
+            "Focused on creating scalable components, improving API data handling, and enhancing cross-platform user experiences."
         ]
     },
     {
@@ -14,7 +15,8 @@
         "title": "Started Web Developer Internship",
         "organization": "FamilySearch",
         "description": [
-            "Joined the TreeWeb team as a frontend developer focused on React."
+            "Contributed to the TreeWeb team at FamilySearch as a frontend developer, building responsive React components and enhancing user-facing features used by millions of genealogy researchers worldwide.",
+            "Collaborated in an Agile environment, participating in code reviews, sprint planning, and cross-functional development discussions."
         ]
     },
     {
@@ -30,7 +32,8 @@
         "title": "Started Software Developer Internship",
         "organization": "AmericaHealth",
         "description": [
-            "Joined the software development team focusing on Angular, PHP, and MySQL."
+            "Developed and maintained internal tools using Angular, PHP, and MySQL, streamlining data management processes for healthcare staff.",
+            "Improved application performance by identifying inefficient queries and enhancing component state logic."
         ]
     },
     {
@@ -46,8 +49,8 @@
         "title": "Started Independent Web Dev Project",
         "organization": "Valley Music Club (volunteer)",
         "description": [
-            "Began architecting the ValleyMusicClub.com official website.",
-            "Communicated regularly with client to determine requirements for the site."
+            "Led the design and development of ValleyMusicClub.com, a public-facing site for managing registration, event promotion, and payment coordination.",
+            "Built the backend with PHP and MySQL, and styled the frontend with SCSS. Maintained regular communication with the client to align technical decisions with user needs."
         ]
     },
     {
@@ -55,7 +58,9 @@
         "type": "milestone",
         "title": "Started Higher Education @BYU-Idaho",
         "organization": "Brigham Young University - Idaho",
-        "description": []
+        "description": [
+            "Enrolled at Brigham Young University–Idaho, beginning coursework in Software Engineering and laying the foundation for a career in full-stack web development."
+        ]
     },
     {
         "date": "2024-07",
@@ -63,9 +68,8 @@
         "title": "Graduated from BYU-Idaho",
         "organization": "Brigham Young University - Idaho",
         "description": [
-            "Bachelor's of Science in Software Engineering",
-            "Certificate in Full-stack Web Development",
-            "GPA: 3.97/4.0"
+            "Graduated with a Bachelor's of Science in Software Engineering and a Certificate in Full-Stack Web Development from Brigham Young University-Idaho (GPA 3.97/4.0).",
+            "Completed coursework in software design, web development, databases, data structures, and Agile methodologies."
         ]
     },
     {
@@ -74,8 +78,8 @@
         "title": "2nd Place in Category @Hackathon",
         "organization": "I-Hack (BYU-Idaho Hackathon)",
         "description": [
-            "Placed in 2nd in the Media and Communication category with a new carpool application: iCarpool",
-            "Created custom component system in JavaScript without using React"
+            "Awarded 2nd Place in the Media and Communication category at BYU-Idaho’s I-Hack Hackathon for developing iCarpool, a carpool coordination app.",
+            "Built a lightweight, custom component framework in vanilla JavaScript to power iCarpool's UI, reducing external dependencies for faster load times."
         ]
     }
 ]
