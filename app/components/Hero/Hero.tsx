@@ -7,12 +7,14 @@ import styles from './Hero.module.css';
 interface HeroProps {
     imgSrc?: string;
     title: string;
+    subtitle?: string;
     className?: string;
 }
 
 export default function Hero({
     imgSrc,
     title,
+    subtitle,
     className,
 }: HeroProps) {
     const [offsetY, setOffsetY] = useState(0);
@@ -41,7 +43,8 @@ export default function Hero({
             <div>
                 <LayoutBand>
                     <div className="flex flex-col justify-center">
-                        <h1 className="m-0">{title}</h1>
+                        <h1 className="m-0 p-0">{title}</h1>
+                        {subtitle && (<p className="p-0">{subtitle}</p>)}
                     </div>
                 </LayoutBand>
             </div>
