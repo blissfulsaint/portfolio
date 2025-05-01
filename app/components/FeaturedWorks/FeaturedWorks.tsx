@@ -49,7 +49,7 @@ export default function FeaturedWorks() {
             </CardLinkGrid>
 
             <Modal isOpen={isOpen} isVisible={isVisible} onClose={closeModal}>
-                <h2 className="m-0">Hello</h2>
+                <h2 className="m-0">{currentProject?.title}</h2>
                 <p>This is the Modal component</p>
             </Modal>
         </>
