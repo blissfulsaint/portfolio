@@ -1,5 +1,6 @@
 'use client';
 import { CardLink, CardLinkGrid } from "blisskit-ui";
+import Image from "next/image";
 import { useState } from "react";
 
 import Modal from "../Modal/Modal";
@@ -7,10 +8,23 @@ import Modal from "../Modal/Modal";
 import projectsData from '@/app/_data/projects.json';
 
 interface Project {
-    imgSrc: string;
     title: string;
     link?: string;
     github?: string;
+    images?: {
+        thumbnailImg?: {
+            src: string;
+            alt: string;
+        };
+        cardLinkImg?: {
+            src: string;
+            alt: string;
+        };
+        displayImg?: {
+            src: string;
+            alt: string;
+        };
+    }
     relatedLinks?: {
         linkTitle: string;
         linkHref: string;
@@ -33,8 +47,10 @@ export default function FeaturedWorks() {
 
     const closeModal = () => {
         setIsOpen(false);
-        setTimeout(() => setIsVisible(false), 250);
-        setCurrentProject(null);
+        setTimeout(() => {
+            setIsVisible(false)
+            setCurrentProject(null);
+        }, 250);
     };
 
     return (
@@ -43,14 +59,19 @@ export default function FeaturedWorks() {
             <CardLinkGrid>
                 {projects && projects.map((project, index) => {
                     return (
-                        <CardLink onClick={() => openModal(index)} title={project.title} imgSrc={project.imgSrc} textClassName="bg-primaryColor" key={index} />
+                        <CardLink onClick={() => openModal(index)} title={project.title} imgSrc={project.images?.cardLinkImg?.src} textClassName="bg-primaryColor" key={index} />
                     )
                 })}
             </CardLinkGrid>
 
             <Modal isOpen={isOpen} isVisible={isVisible} onClose={closeModal}>
+                {currentProject?.images?.displayImg && 
+                    <Image 
+                        src={currentProject.images.displayImg.src}
+                        alt={currentProject.images.displayImg.alt}
+                    />
+                }
                 <h2 className="m-0">{currentProject?.title}</h2>
-                <p>This is the Modal component</p>
             </Modal>
         </>
     )
