@@ -1,6 +1,5 @@
 'use client';
 import { CardLink, CardLinkGrid } from "blisskit-ui";
-import Image from "next/image";
 import { useState } from "react";
 
 import Modal from "../Modal/Modal";
