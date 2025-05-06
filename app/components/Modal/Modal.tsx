@@ -43,16 +43,14 @@ export default function Modal({
       <div className="flex items-center justify-center h-full">
         <div
           className={`bg-secondaryBackground rounded-2xl shadow-2xl relative w-full max-w-lg mx-4
-            transform transition-all duration-300 ease-in-out
+            transform transition-all duration-300 ease-in-out overflow-hidden
             ${isOpen ? "animate-slideUp" : "animate-slideDown"}`}
         >
           {heroSrc && 
-            <div className="overflow-hidden">
-              <Image 
-                src={heroSrc}
-                alt="Hero Image"
-              />  
-            </div>
+            <Image 
+              src={heroSrc}
+              alt="Hero Image"
+            />
           }
           <LayoutBand>
             <button
