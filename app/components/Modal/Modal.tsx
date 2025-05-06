@@ -1,15 +1,24 @@
 import { useEffect } from "react";
+import Image from "next/image";
+import { LayoutBand } from "blisskit-ui";
 
 // **IMPORTANT** This component requires special TailwindCSS configuration for the animations to function
 
 interface ModalProps {
+  heroSrc?: string;
   isOpen: boolean;
   isVisible: boolean;
   onClose: () => void;
   children: React.ReactNode;
 }
 
-export default function Modal({ isOpen, isVisible, onClose, children }: ModalProps) {
+export default function Modal({ 
+  heroSrc,
+  isOpen, 
+  isVisible, 
+  onClose, 
+  children 
+}: ModalProps) {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -32,20 +41,28 @@ export default function Modal({ isOpen, isVisible, onClose, children }: ModalPro
 
       {/* Modal content */}
       <div className="flex items-center justify-center h-full">
+        {heroSrc && 
+          <Image 
+            src={heroSrc}
+            alt="Hero Image"
+          />
+        }
         <div
-          className={`bg-secondaryBackground p-6 rounded-2xl shadow-2xl relative w-full max-w-lg mx-4
+          className={`bg-secondaryBackground rounded-2xl shadow-2xl relative w-full max-w-lg mx-4
                       transform transition-all duration-300 ease-in-out
                       ${isOpen ? "animate-slideUp" : "animate-slideDown"}`}
         >
-          <button
-            onClick={onClose}
-            className="absolute top-3 right-3 text-gray-400 hover:text-gray-800 text-2xl"
-            aria-label="Close modal"
-          >
-            &times;
-          </button>
+          <LayoutBand>
+            <button
+              onClick={onClose}
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-800 text-2xl"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
 
-          {children}
+            {children}
+          </LayoutBand>
         </div>
       </div>
     </div>
