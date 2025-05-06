@@ -64,8 +64,12 @@ export default function FeaturedWorks() {
                 }
                 {currentProject?.link || currentProject?.github &&
                     <div className="flex flex-wrap">
-                        {currentProject.link && <PageLink href={currentProject.link}>Visit Website</PageLink>}
-                        {currentProject.github && <PageLink href={currentProject.github}>View GitHub Repo</PageLink>}
+                        {currentProject.link && (
+                                <PageLink href={currentProject.link}>Visit Website</PageLink>
+                        )}
+                        {currentProject.github && (
+                                <PageLink href={currentProject.github}>View GitHub Repo</PageLink>
+                        )}
                     </div>
                 }
             </Modal>
