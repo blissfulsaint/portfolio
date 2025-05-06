@@ -67,14 +67,14 @@ export default function FeaturedWorks() {
                         {currentProject.link && (
                             <PageLink 
                                 href={currentProject.link} 
-                                className="bg-purple-400 hover:text-purple-400"
+                                theme="blue"
                                 button
                             >Visit Website</PageLink>
                         )}
                         {currentProject.github && (
                             <PageLink 
                                 href={currentProject.github} 
-                                className="bg-blue-400 hover:text-blue-400"
+                                theme="purple"
                                 button
                             >View GitHub Repo</PageLink>
                         )}
