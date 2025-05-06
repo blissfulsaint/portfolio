@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Image from "next/image";
-import { LayoutBand } from "blisskit-ui";
 
 // **IMPORTANT** This component requires special TailwindCSS configuration for the animations to function
 
@@ -53,7 +52,7 @@ export default function Modal({
               className="w-full"
             />
           }
-          <LayoutBand>
+          <div className="p-4">
             <button
               onClick={onClose}
               className="absolute top-3 right-3 text-gray-400 hover:text-gray-800 text-2xl"
@@ -63,7 +62,7 @@ export default function Modal({
             </button>
 
             {children}
-          </LayoutBand>
+          </div>
         </div>
       </div>
     </div>
