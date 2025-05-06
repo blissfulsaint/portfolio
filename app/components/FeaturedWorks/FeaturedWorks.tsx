@@ -58,17 +58,17 @@ export default function FeaturedWorks() {
             </CardLinkGrid>
 
             <Modal isOpen={isOpen} isVisible={isVisible} onClose={closeModal} heroSrc={currentProject?.images?.displayImg?.src} >
-                <h2 className="m-0">{currentProject?.title}</h2>
+                <h2 className="m-0 text-center">{currentProject?.title}</h2>
                 {currentProject?.shortDescription && 
                     <p>{currentProject?.shortDescription}</p>
                 }
                 {(currentProject?.link || currentProject?.github) &&
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap gap-4">
                         {currentProject.link && (
-                                <PageLink href={currentProject.link}>Visit Website</PageLink>
+                                <PageLink href={currentProject.link} button>Visit Website</PageLink>
                         )}
                         {currentProject.github && (
-                                <PageLink href={currentProject.github}>View GitHub Repo</PageLink>
+                                <PageLink href={currentProject.github} button>View GitHub Repo</PageLink>
                         )}
                     </div>
                 }
