@@ -64,13 +64,7 @@ export default function FeaturedWorks() {
                 })}
             </CardLinkGrid>
 
-            <Modal isOpen={isOpen} isVisible={isVisible} onClose={closeModal} heroSrc={currentProject?.images?.displayImg?.src}>
-                {currentProject?.images?.displayImg && 
-                    <Image 
-                        src={currentProject.images.displayImg.src}
-                        alt={currentProject.images.displayImg.alt}
-                    />
-                }
+            <Modal isOpen={isOpen} isVisible={isVisible} onClose={closeModal} heroSrc={currentProject?.images?.displayImg?.src} >
                 <h2 className="m-0">{currentProject?.title}</h2>
             </Modal>
         </>
