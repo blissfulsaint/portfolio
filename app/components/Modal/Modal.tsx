@@ -50,6 +50,7 @@ export default function Modal({
             <Image 
               src={heroSrc}
               alt="Hero Image"
+              className="overflow-hidden"
             />
           }
           <LayoutBand>
