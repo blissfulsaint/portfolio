@@ -1,6 +1,7 @@
 [
     {
         "title": "Style Stage",
+        "shortDescription": "Based on the 2003 project CSS Zen Garden, started by David Shea, a few students and I took part in a newer, similar project - Style Stage. The challenge was to take existing HTML and, without changing any of the HTML through manual edits or Javascript, create visually pleasing styles with only CSS. In our case, we used SCSS to help with the process - but all CSS is of our own creation.",
         "link": "https://blissfulsaint.github.io/stylestage-sass/",
         "github": "https://github.com/blissfulsaint/stylestage-sass",
         "images": {
@@ -21,6 +22,7 @@
     },
     {
         "title": "Valley Music Club",
+        "shortDescription": "Designed and developed a custom web app for Valley Music Club to manage student registrations, display event details, and coordinate payments. Originally built with PHP, MySQL, and SCSS, the platform was later rebuilt using Next.js, TailwindCSS, and PostgreSQL, and is now hosted on Vercel for improved performance and scalability.",
         "link": "https://valleymusicclub.vercel.app",
         "github": null,
         "images": {
@@ -99,6 +101,7 @@
     },
     {
         "title": "I-Carpool (Frontend)",
+        "shortDescription": "The webapp that won 2nd Place in the Media and Communication category at the BYU-I Fall 2023 Hackathon! We chose to create a rideshare app to help improve upon the local Facebook rideshare group. We have made something that is easier and more convenient to use. With increased use of this app, we hope to save students money on trips and help burn less fossil fuels. For the frontend, we built it with HTML and SCSS. For the backend, we used Node.js and JSON to store data.",
         "link": "https://icarpool.netlify.app/",
         "github": "https://github.com/blissfulsaint/icarpool",
         "images": {
@@ -118,6 +121,7 @@
     },
     {
         "title": "I-Carpool (Backend)",
+        "shortDescription": "This is the backend of the Hackathon Fall 2023 I-Carpool project! We initially wanted to use MongoDB for the database but were unable to get it to work. So what you see in front of you now is a Node.js backend with json files to store the data.",
         "link": null,
         "github": "https://github.com/AniSolacion/icarpool-Backend",
         "images": {
