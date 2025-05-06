@@ -11,12 +11,12 @@ const colorThemes: Record<LinkTheme, { base: string; hover: string; text?: strin
   },
   blue: {
     base: "bg-blue-400 text-white",
-    hover: "hover:bg-blue-400",
+    hover: "hover:bg-slate-200 hover:text-blue-400",
     text: "text-blue-400"
   },
   purple: {
     base: "bg-purple-400 text-white",
-    hover: "hover:bg-purple-400",
+    hover: "hover:bg-slate-200 hover:text-purple-400",
     text: "text-purple-400"
   }
 };
