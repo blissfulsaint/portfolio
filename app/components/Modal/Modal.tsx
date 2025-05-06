@@ -47,11 +47,12 @@ export default function Modal({
             ${isOpen ? "animate-slideUp" : "animate-slideDown"}`}
         >
           {heroSrc && 
-            <Image 
-              src={heroSrc}
-              alt="Hero Image"
-              className="overflow-hidden"
-            />
+            <div className="overflow-hidden">
+              <Image 
+                src={heroSrc}
+                alt="Hero Image"
+              />  
+            </div>
           }
           <LayoutBand>
             <button
