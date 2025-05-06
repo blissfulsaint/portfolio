@@ -62,7 +62,7 @@ export default function FeaturedWorks() {
                 {currentProject?.shortDescription && 
                     <p>{currentProject?.shortDescription}</p>
                 }
-                {currentProject?.link || currentProject?.github &&
+                {(currentProject?.link || currentProject?.github) &&
                     <div className="flex flex-wrap">
                         {currentProject.link && (
                                 <PageLink href={currentProject.link}>Visit Website</PageLink>
