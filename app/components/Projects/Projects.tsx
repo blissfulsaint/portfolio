@@ -1,32 +1,23 @@
 'use client';
 import { CardLink, CardLinkGrid } from "blisskit-ui";
 import PageLink from "../PageLink/PageLink";
-import type { ImageMeta } from "@/app/types";
+import type { Project } from "@/app/types";
 import { useState } from "react";
 
 import Modal from "../Modal/Modal";
 
 import projectsData from '@/app/_data/projects.json';
 
-interface Project {
-    title: string;
-    shortDescription?: string;
-    link?: string;
-    github?: string;
-    images?: {
-        thumbnailImg?: ImageMeta;
-        cardLinkImg?: ImageMeta;
-        displayImg?: ImageMeta;
-    }
-    relatedLinks?: {
-        linkTitle: string;
-        linkHref: string;
-    }[];
+interface Projects {
     featured?: boolean;
 }
 
-export default function FeaturedWorks() {
-    const projects = projectsData.filter((project) => project.featured) as Project[];
+export default function Projects({
+    featured = false
+}: Projects) {
+    const projects = (featured ? 
+        projectsData.filter((project) => project.featured) :
+        projectsData) as Project[];
 
     const [isOpen, setIsOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);

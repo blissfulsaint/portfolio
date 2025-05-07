@@ -1,5 +1,47 @@
 [
     {
+        "title": "BlissKit-UI",
+        "shortDescription": "A Next.js UI library featuring reusable, independently developed, and Tailwind CSS-compatible components by Brandon Lisonbee for streamlined and efficient web development.",
+        "link": "https://blisskit-ui-storybook.vercel.app/",
+        "github": "https://github.com/blissfulsaint/blisskit-ui",
+        "images": {
+            "thumbnailImg": {
+                "src": "/blisskit-ui.jpeg",
+                "alt": "BlissKit-UI Screenshot"
+            },
+            "cardLinkImg": {
+                "src": "/blisskit-ui.jpeg",
+                "alt": "BlissKit-UI Screenshot"
+            },
+            "displayImg": {
+                "src": "/blisskit-ui.jpeg",
+                "alt": "BlissKit-UI Screenshot"
+            }
+        },
+        "featured": true
+    },
+    {
+        "title": "Valley Music Club",
+        "shortDescription": "Designed and developed a custom web app for Valley Music Club to manage student registrations, display event details, and coordinate payments. Originally built with PHP, MySQL, and SCSS, the platform was later rebuilt using Next.js, TailwindCSS, and PostgreSQL, and is now hosted on Vercel for improved performance and scalability.",
+        "link": "https://valleymusicclub.vercel.app",
+        "github": "https://github.com/blissfulsaint/valleymusicclub",
+        "images": {
+            "thumbnailImg": {
+                "src": "/vmc.png",
+                "alt": "Valley Music Club Screenshot"
+            },
+            "cardLinkImg": {
+                "src": "/vmc.png",
+                "alt": "Valley Music Club Screenshot"
+            },
+            "displayImg": {
+                "src": "/vmc.png",
+                "alt": "Valley Music Club Screenshot"
+            }
+        },
+        "featured": true
+    },
+    {
         "title": "Style Stage",
         "shortDescription": "Based on the 2003 project CSS Zen Garden, started by David Shea, a few students and I took part in a newer, similar project - Style Stage. The challenge was to take existing HTML and, without changing any of the HTML through manual edits or Javascript, create visually pleasing styles with only CSS. In our case, we used SCSS to help with the process - but all CSS is of our own creation.",
         "link": "https://blissfulsaint.github.io/stylestage-sass/",
@@ -10,33 +52,12 @@
                 "alt": "Style Stage Screenshot"
             },
             "cardLinkImg": {
-                "src": "/stylestagethumb.jpg",
+                "src": "/stylestage.png",
                 "alt": "Style Stage Screenshot"
             },
             "displayImg": {
-                "src": "/stylestagethumb.jpg",
+                "src": "/stylestage.png",
                 "alt": "Style Stage Screenshot"
-            }
-        },
-        "featured": true
-    },
-    {
-        "title": "Valley Music Club",
-        "shortDescription": "Designed and developed a custom web app for Valley Music Club to manage student registrations, display event details, and coordinate payments. Originally built with PHP, MySQL, and SCSS, the platform was later rebuilt using Next.js, TailwindCSS, and PostgreSQL, and is now hosted on Vercel for improved performance and scalability.",
-        "link": "https://valleymusicclub.vercel.app",
-        "github": null,
-        "images": {
-            "thumbnailImg": {
-                "src": "/vmc.png",
-                "alt": "Valley Music Club Screenshot"
-            },
-            "cardLinkImg": {
-                "src": "/vmc.png",
-                "alt": "Valley Music Club Screenshot"
-            },
-            "displayImg": {
-                "src": "/vmc.png",
-                "alt": "Valley Music Club Screenshot"
             }
         },
         "featured": true
@@ -58,8 +79,7 @@
                 "src": "/lyft1thumb.jpg",
                 "alt": "Lyft Screenshot"
             }
-        },
-        "featured": true
+        }
     },
     {
         "title": "Valley Music Club API",
