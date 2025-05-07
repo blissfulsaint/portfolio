@@ -19,7 +19,7 @@ export default function Home() {
       <LayoutBand>
         <Separator size="xs" />
         <Projects featured />
-        <PageLink href='/portfolio'>View Full Portfolio</PageLink>
+        <PageLink href='/portfolio' button className="mx-auto mt-4">View Full Portfolio</PageLink>
         <Separator size="xxs" />
         <GitHubContributionGrid />
         <Separator size="xs" />
