@@ -5,6 +5,7 @@
 :root {
   /* This site only supports dark mode for the time being */
   --background: #0a0a0a;
+  --secondary-background: #252525;
   --foreground: #ededed;
 
   --primary-color: rgb(0, 68, 114);

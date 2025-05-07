@@ -4,7 +4,8 @@ import { LayoutBand, Separator } from "blisskit-ui";
 import Hero from "./components/Hero/Hero";
 import GitHubContributionGrid from "./components/GitHubContributionGrid/GitHubContributionGrid";
 import GitHubLanguagesChart from "./components/GitHubLanguagesChart/GitHubLanguagesChart";
-import FeaturedWorks from "./components/FeaturedWorks/FeaturedWorks";
+import Projects from "./components/Projects/Projects";
+import PageLink from "./components/PageLink/PageLink";
 
 export const metadata: Metadata = {
   title: "Home | BlissHub",
@@ -17,7 +18,8 @@ export default function Home() {
       <Hero title="Welcome to BlissHub!" subtitle="Brandon Lisonbee's Software Engineering Portfolio Site" imgSrc="/hiking.jpg" />
       <LayoutBand>
         <Separator size="xs" />
-        <FeaturedWorks />
+        <Projects featured />
+        <PageLink href='/portfolio' button className="mx-auto mt-4">View Full Portfolio</PageLink>
         <Separator size="xxs" />
         <GitHubContributionGrid />
         <Separator size="xs" />
