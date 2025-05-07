@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Learn more about Brandon's background, experience, and interests!",
 };
 
-export default function Home() {
+export default function AboutMe() {
   return (
     <>
       <Hero title="About Me" imgSrc="/hiking.jpg" />

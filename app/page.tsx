@@ -5,6 +5,7 @@ import Hero from "./components/Hero/Hero";
 import GitHubContributionGrid from "./components/GitHubContributionGrid/GitHubContributionGrid";
 import GitHubLanguagesChart from "./components/GitHubLanguagesChart/GitHubLanguagesChart";
 import Projects from "./components/Projects/Projects";
+import PageLink from "./components/PageLink/PageLink";
 
 export const metadata: Metadata = {
   title: "Home | BlissHub",
@@ -18,6 +19,7 @@ export default function Home() {
       <LayoutBand>
         <Separator size="xs" />
         <Projects featured />
+        <PageLink href='/portfolio'>View Full Portfolio</PageLink>
         <Separator size="xxs" />
         <GitHubContributionGrid />
         <Separator size="xs" />
