@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Portfolio() {
   return (
     <>
-      <Hero title="Brandon Lisonbee's Portfolio" imgSrc="/circles.png" />
+      <Hero title="Brandon Lisonbee's Portfolio" imgSrc="/circles.png" className="bg-primaryColor" />
       <LayoutBand>
         <Separator size="xs" />
         <Projects />

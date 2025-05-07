@@ -14,6 +14,11 @@ const links = [
         pageTitle: 'About Me',
         href: '/about-me',
         ariaLabel: 'Learn about Brandon Lisonbee',
+    },
+    {
+        pageTitle: 'Portfolio',
+        href: '/portfolio',
+        ariaLabel: 'View Brandon Lisonbee&apos;s Portfolio',
     }
 ]
 
